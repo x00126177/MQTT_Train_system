@@ -28,7 +28,9 @@ Requirements met
 A driver will have a screen populated with 4 bash terminals to run the scripts. All the scripts are automated but the brake status console will ask for a desired amount of brake time from the driver in the case of an emergency. The logfile will also need to be told how many lines of data to output and constantly refresh to the driver.
 The carriages will also be run through a screen. Three terminals will be needed to run the scripts. None will need to be manually operated unless the event of an emergency when the carriages need to come to a stop. The carriages can message the driver for enquiries or they can initiate the emergency brake handle if they come into any difficulty. the emergency brake handle can only be used every 30 seconds for both carriages. The driver can message back to the carriages too with individual messages or broadcast messages when announcing things such as the destination of the next stop. 
 
+
 Driver (VM1) 10.10.0.5
+
 Completed: driver_brake_status.sh
 - One window should be constantly be displaying the brake status, ON or OFF. This should start at OFF. It should change to ON if a message comes in from a carriage to activate the brakes. It should automatically change back to OFF after 10 seconds of being ON.
 
