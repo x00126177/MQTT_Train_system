@@ -50,9 +50,8 @@ Completed: carriage1/2_send_messages.sh
 Completed: carriage1/2_EBH.sh
 - One window should allow a passenger to activate the emergency brakes by sending a message to the control system on VM1.
 <br/>
+<br/>
 ## Drivers Scripts 
-<br/>
-<br/>
 ### driver_brake_status.sh
 
 This script allows the driver to show the current status of the brakes. When the script is first ran it shows the current status of the brakes which is off and it also prompts the driver to input the amount of braking time he requires in the case of an emergency. It shows the status of the brakes until it receives a message from a carriage’s emergency handbrake that then messages all of the carriages that the train is coming to a stop and the amount of time it will be braking for. This is all logged in the logfile.txt with a timestamp of the event. It then stops the train for the period specified by the driver. When the braking time is over the brake status is then prompted again after it has come to a stop.
@@ -75,8 +74,7 @@ This allows the driver to configure the amount of log entries he wants to list f
 
 
 ## Carriage1/2 Scripts
-<br/>
-<br/>
+
 ### carriage1/2_incoming_messages.sh
 
 This waits for messages sent by the driver. It can only receive messages from the driver. The types of messages it accepts are individual messages, a broadcast message or an alert about the brakes being initiated. The message format is as follows: date, time, sender (Driver) and then the message. If the brakes are initiated the carriage is told the amount of time also that the brakes will be initiated for. 
@@ -90,6 +88,7 @@ Allows the carriages to individually message the driver. A carriage cannot messa
 ### carriage1/2_EBH.sh
 
 When ran, the carriage is prompted with a brief description as to the penalties that can be issued if the emergency brake handle is used improperly. The lever is initiated with the number 1 and publishes to the drivers brake controller to stop the train. The user is then prompted again to initiate the brakes but is not necessary for the carriage to do so as the train is coming to a stop anyway.
+<br/>
 <br/>
 
 ## Tests performed
